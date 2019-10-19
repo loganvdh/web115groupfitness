@@ -27,3 +27,13 @@ function inputSubmit(){
 	console.log(monday);
 	console.log(tuesday);
 }
+
+function textclear(){
+    for (i=0; i<34; i++){
+        document.getElementById(i).value = "";
+    }
+}
+
+function print(){
+    window.print();
+}
