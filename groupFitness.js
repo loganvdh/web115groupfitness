@@ -4,7 +4,7 @@ function inputSubmit(){
 		var meal = document.getElementById(i).value;
 		monday.push(meal);
 	}
-	var tuesday = []
+	var tuesday = [];
 	for (i=5; i < 10; i++){
 		var meal = document.getElementById(i).value;
 		tuesday.push(meal);
@@ -35,7 +35,7 @@ function inputSubmit(){
 		sunday.push(meal);
 	}
     
-	var weekdayNames = ["Monday", "Tuesday", "Wednesday", "Thursday", 
+    var weekdayNames = ["Monday", "Tuesday", "Wednesday", "Thursday", 
                         "Friday", "Saturday", "Sunday"];
     var weekdaySchedules = [monday, tuesday, wednesday, thursday,
                             friday, saturday, sunday];
