@@ -1,4 +1,7 @@
+var ogBody = document.getElementsByTagName('body')[0].innerHTML; 
+var reset = 0;
 function inputSubmit(){
+	reset = 1;
 	var monday = [];
 	for (i=0; i < 5; i++){
 		var meal = document.getElementById(i).value;
@@ -40,8 +43,12 @@ function inputSubmit(){
     var weekdaySchedules = [monday, tuesday, wednesday, thursday,
                             friday, saturday, sunday];
     var mealnames = ["Breakfast", "Snack 1", "Lunch", "Snack 2", "Dinner"];
+    document.body.innerHTML = "";
                             
     // creating an unordered list of weekdays
+    document.write("<p id=\"buttons\">");
+    document.write("<button onclick=\"textclear()\">Reset</button>"); 
+    document.write("<button onclick=\"_print()\">Print</button>");
     document.write("<ul>");
     for(i=0; i < weekdayNames.length; i++){
         document.write("<p><li><b>" + weekdayNames[i] + "</b>");
@@ -62,8 +69,12 @@ function inputSubmit(){
 }
 
 function textclear(){
-    for (i=0; i<34; i++){
+    if (reset == 0){
+    	for (i=0; i<34; i++){
         document.getElementById(i).value = "";
+    	}
+    } if (reset == 1){
+    	document.body.innerHTML = ogBody;
     }
 }
 
