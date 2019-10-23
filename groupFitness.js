@@ -1,6 +1,7 @@
 var ogBody = document.getElementsByTagName('body')[0].innerHTML; 
 var reset = 0;
 function inputSubmit(){
+    document.head.innerHTML = "<link rel=\"stylesheet\" type=\"text/css\" href=\"groupFitness.css\">"                            
 	reset = 1;
 	var monday = [];
 	for (i=0; i < 5; i++){
@@ -44,12 +45,14 @@ function inputSubmit(){
                             friday, saturday, sunday];
     var mealnames = ["Breakfast", "Snack 1", "Lunch", "Snack 2", "Dinner"];
     document.body.innerHTML = "";
-                            
     // creating an unordered list of weekdays
     document.write("<p id=\"buttons\">");
     document.write("<button onclick=\"textclear()\">Reset</button>"); 
     document.write("<button onclick=\"_print()\">Print</button>");
+    document.write("<table id=\"table1\" class = \"style-table\">");
     document.write("<ul>");
+    document.write("<tr>");
+    document.write("<td>");
     for(i=0; i < weekdayNames.length; i++){
         document.write("<p><li><b>" + weekdayNames[i] + "</b>");
         
@@ -65,7 +68,12 @@ function inputSubmit(){
         document.write("</ul>");
         document.write("</li></p>");
     }
+    document.write("</td>");
+    document.write("</tr>");
     document.write("</ul>");
+    document.write("</table>");
+    document.head.innerHTML = "<link rel=\"stylesheet\" type=\"text/css\" href=\"groupFitness.css\">"                            
+
 }
 
 function textclear(){
