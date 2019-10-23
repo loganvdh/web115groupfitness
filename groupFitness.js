@@ -49,6 +49,7 @@ function inputSubmit(){
     document.write("<p id=\"buttons\">");
     document.write("<button onclick=\"textclear()\">Reset</button>"); 
     document.write("<button onclick=\"_print()\">Print</button>");
+    document.write("</p>");
     document.write("<table id=\"table1\" class = \"style-table\">");
     document.write("<ul>");
     document.write("<tr>");
